@@ -1,0 +1,43 @@
+
+<%- include("common/head") %>
+
+<%-include('common/nav')%>
+<!---header--->
+<div class="header">
+    <h1>Welcome!!!</h1>
+</div>
+<!---header--->
+<!---main--->
+<div class="main">
+    <div class="main-section">
+        <div class="registration-section">
+            <h2>Register</h2>
+            <% if (message.length > 0) { %>
+                <div class="alert">
+                    <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
+                    <strong><%= message %></strong>
+                </div>
+                <% } %>
+                    <div class="social-icons">
+
+                        <a href="#"><i class="icon2"></i><span>Sign in with gmail</span></a>
+                    </div>
+                    <div class="register-form">
+                        
+                        <div class="registration-form">
+                            <form method="post" action="/signup">
+                                <input type="text" name="username" placeholder="User name">
+                                <input type="text" name="email" placeholder="Email">
+                                <input type="password" name="password" placeholder="Password">
+                                <input type="password" name="confirmpassword" placeholder="Confirm Password">
+                                <input type="submit" value="Register">
+                            </form>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+        </div>
+    </div>
+    
+
+    <!---main--->
+    <%- include("common/footer") %>
